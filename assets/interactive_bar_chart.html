@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-9acacf8abc42230cb0a65c03c16e0d3e"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Business", "legend": null, "type": "nominal"}, "tooltip": [{"field": "License Type", "type": "nominal"}, {"field": "Business", "type": "nominal"}, {"field": "Count", "type": "quantitative"}], "x": {"field": "Count", "title": "Count of Licenses", "type": "quantitative"}, "y": {"field": "License Type", "sort": "-x", "title": "License Type", "type": "nominal"}}, "height": 400, "params": [{"name": "param_1", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Interactive Bar Chart: License Type vs Business", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-9acacf8abc42230cb0a65c03c16e0d3e": [{"License Type": "APPRAISAL", "Business": "N", "Count": 3}, {"License Type": "ARCHITECT", "Business": "N", "Count": 16}, {"License Type": "ATHLETIC TRAINER", "Business": "N", "Count": 14}, {"License Type": "ATHLETICS", "Business": "N", "Count": 9}, {"License Type": "AUCTIONEER", "Business": "N", "Count": 1}, {"License Type": "AUCTIONEER", "Business": "Y", "Count": 1}, {"License Type": "CEMETERY OVERSIGHT", "Business": "Y", "Count": 1}, {"License Type": "CLIN PSYCHOLOGIST", "Business": "N", "Count": 11}, {"License Type": "COLLECTION AGENCY", "Business": "Y", "Count": 14}, {"License Type": "COMM ASSOC MGR", "Business": "N", "Count": 36}, {"License Type": "COSMO", "Business": "N", "Count": 2433}, {"License Type": "COSMO", "Business": "Y", "Count": 219}, {"License Type": "DENTAL", "Business": "N", "Count": 542}, {"License Type": "DENTAL", "Business": "Y", "Count": 1}, {"License Type": "DESIGN FIRM", "Business": "Y", "Count": 59}, {"License Type": "DETECTIVE BOARD", "Business": "N", "Count": 4407}, {"License Type": "DETECTIVE BOARD", "Business": "Y", "Count": 17}, {"License Type": "DIETETIC AND NUTRITION", "Business": "N", "Count": 55}, {"License Type": "DIETETIC AND NUTRITION", "Business": "Y", "Count": 1}, {"License Type": "ENVIRON. HLTH PRACT", "Business": "N", "Count": 10}, {"License Type": "FUNERAL AND EMBALMER", "Business": "N", "Count": 52}, {"License Type": "GEOLOGY", "Business": "N", "Count": 7}, {"License Type": "HME AND SERVICES PROV", "Business": "Y", "Count": 15}, {"License Type": "HOME INSPECTOR", "Business": "N", "Count": 30}, {"License Type": "HOME INSPECTOR", "Business": "Y", "Count": 8}, {"License Type": "IDPR", "Business": "N", "Count": 6}, {"License Type": "IDPR", "Business": "Y", "Count": 2}, {"License Type": "INTERIOR DESIGN", "Business": "N", "Count": 21}, {"License Type": "LAND SURVEYOR BOARD", "Business": "N", "Count": 16}, {"License Type": "LANDSCAPE ARCHITECT", "Business": "N", "Count": 7}, {"License Type": "LIMITED LIABILITY CO", "Business": "Y", "Count": 16}, {"License Type": "MAR AND FAM THERAPIST", "Business": "N", "Count": 12}, {"License Type": "MAR AND FAM THERAPIST", "Business": "Y", "Count": 1}, {"License Type": "MASSAGE LICENSING BD", "Business": "N", "Count": 49}, {"License Type": "MEDICAL BOARD", "Business": "N", "Count": 4}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

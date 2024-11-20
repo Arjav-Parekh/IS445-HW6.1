@@ -1,0 +1,4 @@
+theme: minima
+markdown: kramdown
+title: Data Visualization Homework
+description: Visualizations of the licenses dataset using Altair and Python

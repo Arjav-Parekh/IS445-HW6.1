@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Arjav Parekh - parekh6 | License Data Visualization Assignment</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Arjav Parekh - parekh6" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Visualizations of the licenses dataset using Altair and Python" />
+<meta property="og:description" content="Visualizations of the licenses dataset using Altair and Python" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="License Data Visualization Assignment" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Arjav Parekh - parekh6" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Visualizations of the licenses dataset using Altair and Python","headline":"Arjav Parekh - parekh6","name":"License Data Visualization Assignment","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="License Data Visualization Assignment" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">License Data Visualization Assignment</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Arjav Parekh - parekh6</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="is445-data-visualization---hw61">IS445 Data Visualization - HW6.1</h1>
+
+<p>This page contains visualizations of the licenses dataset, along with a detailed analysis write-up.</p>
+
+<h2 id="visualizations">Visualizations</h2>
+
+<h3 id="bar-chart-count-of-licenses-by-ever-disciplined">Bar Chart: Count of Licenses by Ever Disciplined</h3>
+<p>The bar chart visualizes the distribution of licenses based on whether individuals have ever been disciplined. The data is grouped by the Ever Disciplined column, which contains two categories: “Yes” and “No”. The y-axis represents the number of licenses in each category, while the x-axis categorizes the individuals based on their disciplinary status.</p>
+
+<p><strong>Data Transformations</strong>: To create the bar chart, I first performed a data transformation on the cleaned dataset by grouping the data based on the Ever Disciplined column. This column contains categorical values indicating whether an individual has ever been disciplined (“Yes” or “No”). Using the groupby function, I aggregated the data by counting the number of licenses in each category. This transformation resulted in a new DataFrame that consists of two columns: Ever Disciplined and the calculated License Count, representing the number of licenses in each disciplinary category. By resetting the index, I ensured the grouped data was in a format suitable for visualization with Altair.</p>
+
+<p><strong>Design Choices</strong>: The bar chart uses the Ever Disciplined column on the x-axis (nominal) and License Count on the y-axis (quantitative) to compare the number of licenses between disciplined (“Yes”) and non-disciplined (“No”) categories. A blue color scheme was applied to distinguish the bars, enhancing visual appeal and clarity. Tooltips were added to display exact values on hover, improving interactivity without cluttering the visualization. The chart title clearly communicates its purpose, while the size was chosen for optimal readability, making the chart both functional and visually engaging.</p>
+
+<p><a href="/assets/bar_chart.html">View the Bar Chart</a></p>
+
+<hr />
+
+<h3 id="interactive-bar-chart-number-of-licenses-by-license-type">Interactive Bar Chart: Number of Licenses by License Type</h3>
+
+<p><strong>Data Transformations</strong>: To create the interactive bar plot, the dataset was grouped by License Type to calculate the count of licenses for each type. Using the groupby function, the data was aggregated, and a new column, License Count, was created to represent the number of licenses for each License Type. The transformed dataset was then reset to ensure compatibility with Altair for visualization. This process simplified the data structure while preserving the necessary details for analysis.</p>
+
+<p><strong>Design Choices</strong>: The interactive bar chart visualizes License Type on the y-axis (nominal) and License Count on the x-axis (quantitative), providing a clear comparison of license types by their respective counts. The bars are colored using a blue gradient to reflect the number of licenses, emphasizing higher counts. Interactivity was added through tooltips, allowing users to hover over each bar to view exact values, enhancing the chart’s usability. The axes are labeled descriptively, and the chart title succinctly conveys its focus, while its dimensions ensure readability across different screens. These choices make the visualization both informative and engaging for users.</p>
+
+<p><a href="/assets/interactive_bar_chart.html">View the Interactive Bar Chart</a></p>
+
+<hr />
+
+<h2 id="links-to-resources">Links to Resources</h2>
+
+<ul>
+  <li><a href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/licenses_fall2022.csv">The Data</a></li>
+  <li><a href="/viz.ipynb">The Analysis</a></li>
+</ul>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">License Data Visualization Assignment</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">License Data Visualization Assignment</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Visualizations of the licenses dataset using Altair and Python</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
